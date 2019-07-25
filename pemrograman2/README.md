@@ -5,5 +5,7 @@
 * Program pertama yang harus dijalankan adalah menuUtama.java
 * Dari menuUtama, bisa melakukan login pada portal admin ataupun portal customer. Bisa juga registrasi customer baru
 * Program ini membutuhkan library
-![library](pemrograman2/library.png)
+
+![library](https://raw.githubusercontent.com/imanudin11/kuliah/master/pemrograman2/library.png)
+
 Note : Jika program terdapat null pointer setelah login sebagai customer/admin, coba hapus icon avatar.png yang ada pada form menuAdmin.java dan menuCustomer.java
