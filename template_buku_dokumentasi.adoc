@@ -1,0 +1,291 @@
+:toc:
+:toclevels: 5
+:sectnums:
+:sectnumlevels: 5
+[options="unbreakable"]
+include::entity.adoc[]
+
+
+[[X1]]Template Buku
+==================
+Ahmad Imanudin <ahmad@imanudin.com>
+:Author Initials: AI
+:revdate:   Feb 13, 2020
+:revnumber: 0.1
+:website: http://asciidoc.org/
+:author: Ahmad Imanudin
+:pmg: Proxmox Mail Gateway
+:UT: Untangle
+
+
+== BAB
+
+=== SUB BAB
+
+==== SUB SUB BAB
+
+===== SUB SUB SUB BAB
+
+Contoh penulisan tips
+
+
+.Catatan
+****
+Ini hanya catatan saja dan apakah bisa tulisannya lebih dari yang telah ditentukan
+****
+
+== Penulisan source code
+
+[source, mysql]
+----
+mysql -u root -p
+create database latihan3;
+use latihan3;
+----
+
+atau bisa juga menggunakan spasi
+
+  mysql -u root -p
+  create database latihan3;
+  use latihan3;
+
+[source,ruby]
+----
+require 'prawn'
+
+Prawn::Document.generate 'example.pdf' do
+  text 'Hello, World!'
+end
+----
+
+[source,bash]
+----
+for i in account; do
+echo "tampilkan account $account"
+done
+----
+
+== Penulisan Ref/Link
+
+Contoh link merujuk pada <<X1,template buku>>.
+
+== Pemberian tulisan khusus
+
+`README` and `INSTALL`
+
+== Contoh pembuatan list
+
+=== number
+
+. satu
+. dua
+
+=== titik
+* titik satu
+* titik dua
+
+=== abjad
+
+.. Abjad
+.. Abjad dua
+
+=== Callout
+
+[source, text]
+----
+Ini satu <1>
+Ini dua <2>
+----
+
+
+<1> Ini keterangan nomor 1
+<2> ini keterangan nomor 2
+
+== Contoh point/garis besar
+
+.Example book documents
+Book::
+The `./doc/book.txt` file in the AsciiDoc distribution.
+
+Multi-part book::
+The `./doc/book-multi.txt` file in the AsciiDoc distribution.
+
+atau
+
+[horizontal]
+Book::
+The `./doc/book.txt` file in the AsciiDoc distribution.
+
+
+Multi-part book::
+The `./doc/book-multi.txt` file in the AsciiDoc distribution.
+
+== Format penulisan bold / italic / underline
+
+- _italic_
+- *bold*
+- [underline]#Underline text#, [overline]#overline text#
+- Mark #ini mark#
+- ^super^script phrase
+- ~sub~script phrase
+- horizontal ruler
+
+'''
+
+- Page break
+
+<<<
+
+- Checklist
+* [*] checked
+* [x] also checked
+* [ ] not checked
+*     normal list item
+
+== Penulisan tips, note atau warning
+
+TIP: ini tips
+
+atau
+
+[TIP]
+--
+The Edge MTA can be any edge security solution for mail. You might
+already deploy such solutions for functions such as filtering. Some
+filtering might be duplicated between an edge MTA and the Zimbra MTA.
+--
+
+WARNING: ini warning
+
+NOTE: ini hanya note, kenapa tulisan note nya masih besar ya?
+
+[icons=None, caption="My Special Note"]
+NOTE: This is my special note.
+
+CAUTION: Caution
+
+IMPORTANT: Penting
+
+== Pembuatan Tabel
+
+.Nama Tabel
+[cols="3*",options="header"]
+|====
+|Baris 1 kolom 1
+|Baris 1 kolom 2
+|Baris 1 kolom 3
+
+|Undefined (default).
+|Same directory as the output document.
+|`javascripts` subdirectory in the AsciiDoc configuration directory
+(the directory containing the backend conf file).
+
+|Absolute or relative directory name.
+|Absolute or relative to the output document.
+|Absolute or relative to the AsciiDoc configuration directory (the
+directory containing the backend conf file).
+
+| Baris 4 kolom 1
+| Baris 4 Kolom 2
+| Baris 4 Kolom 3
+|====
+
+Atau
+
+[cols="1e,1,5a",options="header"]
+|====
+|Baris 1 kolom 1
+|Baris 1 kolom 2
+|Baris 1 kolom 3
+
+|Undefined (default).
+|Same directory as the output document.
+|`javascripts` subdirectory in the AsciiDoc configuration directory
+(the directory containing the backend conf file).
+
+|Absolute or relative directory name.
+|Absolute or relative to the output document.
+|Absolute or relative to the AsciiDoc configuration directory (the
+directory containing the backend conf file).
+
+| Baris 4 kolom 1
+| Baris 4 Kolom 2
+| Baris 4 Kolom 3
+|====
+
+== Pembuatan Footnote
+
+Ini footnote footnote:[Ini adalah footnote]:
+
+== Contoh memanggil adoc yang lain
+
+include::file-adoc.adoc[]
+
+Contohnya. Menampilkan product `PMG` {pmg} dan `UT` {UT}
+
+== Mengambil data tabel dari file CSV
+
+.Daftar peserta Excellent Insight
+[cols="3,5,2",options="header"]
+,===
+ID,Customer Name,Contact Name
+
+include::peserta.csv[]
+,===
+
+== Enter satu baris
+
+Untuk enter kebawah, gunakan tanda `+` (`plus`) 
+
+satu +
+dua +
+tiga
+
+== Single quotes dan double quotes
+
+`Single quoted text'
+
+``Double quoted''
+
+== Pemberian warna
+
+[yellow]#Ini warna kuning# dan [big yellow blue-background]*Background Biru*.
+
+== Super Text
+
+X 10 menjadi +
+x^10^
+
+== Tradermark copyright
+
+(C) copyright, (TM) trademark, (R) registered trademark
+
+== Quote
+
+[quote, Bertrand Russell, The World of Mathematics (1956)]
+A good notation has subtlety and suggestiveness which at times makes
+it almost seem like a live teacher.
+
+
+== Question and Andswer
+
+[qanda]
+Question one::
+Answer one.
+Question two::
+Answer two.
+
+== Contoh Gambar
+
+.gambar samsung
+image::gambar/samsung-email.jpeg[]
+
+== Contoh gambar dengan scale
+
+.gambar samsung
+image:gambar/samsung-email.jpeg[scaledwidth="50%", role="left"] jika hendak ditambahkan tulisan, maka tanda `:` harus ditulis satu saja
+
+== Memanggil link
+
+Memanggil link link:http://asciidoctor.org/[Asciidoctor].
+
